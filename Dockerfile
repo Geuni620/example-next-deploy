@@ -2,7 +2,7 @@ FROM node:12 as base
 WORKDIR /app
 
 COPY package.json package-lock.json ./
-RUN npm ci
+RUN npm install
 
 ENV CONTINUOUS_INTEGRATION=1
 ENV NODE_ENV=production
